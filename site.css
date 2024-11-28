@@ -1,0 +1,52 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: Arial, sans-serif; background-color: #000; color: #333; animation: slideIn 2s ease-out; }
+
+.container { width: 90%; margin: 0 auto; padding: 20px; animation: slideIn 2s ease-out; }
+
+header { text-align: center; margin-bottom: 30px; animation: slideIn 2s ease-out; }
+header h1, header p { opacity: 0; transform: translateX(-100%); animation: slideIn 1.5s forwards; }
+header h1 { font-size: 50px; color: #00eeff; animation-delay: 0.5s; }
+header p { font-size: 20px; color: #fff; animation-delay: 1s; }
+
+.bebidas, .links { display: flex; justify-content: center; flex-wrap: wrap; gap: 120px; margin-top: 20px; animation: slideIn 2s ease-out; } /* Aumentei o gap para 30px */
+.bebida { text-align: center; width: 250px; animation: slideIn 2s ease-out; }
+.bebida img { width: 120%; height: 350px; border-radius: 8px; }
+.bebida p { margin-top: 10px; font-size: 18px; color: #00eeff; }
+
+.contato { margin-top: 40px; text-align: center; animation: slideIn 2s ease-out; }
+.contato h2 { font-size: 28px; color: #fff; margin-bottom: 20px; }
+.links a { text-decoration: none; color: #333; text-align: center; }
+.links a img { width: 80px; height: 80px; margin-bottom: 10px; }
+.links a p { font-size: 16px; font-weight: bold; color: #00eeff; }
+
+footer { text-align: center; margin-top: 40px; font-size: 16px; color: #ff0000; animation: fadeInOut 2s ease-in-out infinite; }
+footer p { font-weight: bold; }
+
+.horario { background-color: #61494927; color: #fff; padding: 20px; margin-top: 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); animation: slideIn 2s ease-out; }
+.horario h2 { font-size: 28px; color: #00eeff; margin-bottom: 10px; }
+.horario p { font-size: 18px; color: #E2E8F0; }
+.horario strong { color: #00eeff; }
+
+@media (max-width: 768px) {
+    header h1 { font-size: 28px; }
+    .bebida p, .links a p { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+    header h1 { font-size: 24px; }
+    .bebida img { width: 80%; }
+    .bebida p { font-size: 14px; }
+    .links a { width: 100px; }
+    footer p { font-size: 14px; }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
